@@ -33,6 +33,8 @@ RUN echo -e "admin\nadmin" | passwd root \
 
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
+# let non-interactive + non-login shell find profile
+ENV BASH_ENV /etc/profile
 #ENV PATH $PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
 
 EXPOSE 22 80
